@@ -112,5 +112,192 @@ public class Observation {
     @Column(name = "_component")
     private List<ObservationComponent> component;
 
+    @OneToOne(fetch = FetchType.LAZY,
+            cascade =  CascadeType.ALL)
+    @JoinColumn(name = "_reference")
+    private Reference reference;
 
+    public Long getId() {
+        return id;
+    }
+
+    public Identifier getIdentifier() {
+        return identifier;
+    }
+
+    public List<Reference> getBasedOn() {
+        return basedOn;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public List<CodeableConcept> getCategory() {
+        return category;
+    }
+
+    public CodeableConcept getCode() {
+        return code;
+    }
+
+    public Reference getSubject() {
+        return subject;
+    }
+
+    public Reference getContext() {
+        return context;
+    }
+
+    public Date getEffectiveDateTime() {
+        return effectiveDateTime;
+    }
+
+    public Period getEffectivePeriod() {
+        return effectivePeriod;
+    }
+
+    public Date getInstant() {
+        return instant;
+    }
+
+    public Reference getPerformer() {
+        return performer;
+    }
+
+    public ObservationValue getValue() {
+        return value;
+    }
+
+    public CodeableConcept getDateAbsentReason() {
+        return dateAbsentReason;
+    }
+
+    public CodeableConcept getInterpretation() {
+        return interpretation;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public CodeableConcept getBodySite() {
+        return bodySite;
+    }
+
+    public CodeableConcept getMethod() {
+        return method;
+    }
+
+    public Reference getSpecimen() {
+        return specimen;
+    }
+
+    public Reference getDevice() {
+        return device;
+    }
+
+    public List<ObservationRelated> getRelated() {
+        return related;
+    }
+
+    public List<ObservationComponent> getComponent() {
+        return component;
+    }
+
+    public Reference getReference() {
+        return reference;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setIdentifier(Identifier identifier) {
+        this.identifier = identifier;
+    }
+
+    public void setBasedOn(List<Reference> basedOn) {
+        this.basedOn = basedOn;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public void setCategory(List<CodeableConcept> category) {
+        this.category = category;
+    }
+
+    public void setCode(CodeableConcept code) {
+        this.code = code;
+    }
+
+    public void setSubject(Reference subject) {
+        this.subject = subject;
+    }
+
+    public void setContext(Reference context) {
+        this.context = context;
+    }
+
+    public void setEffectiveDateTime(Date effectiveDateTime) {
+        this.effectiveDateTime = effectiveDateTime;
+    }
+
+    public void setEffectivePeriod(Period effectivePeriod) {
+        this.effectivePeriod = effectivePeriod;
+    }
+
+    public void setInstant(Date instant) {
+        this.instant = instant;
+    }
+
+    public void setPerformer(Reference performer) {
+        this.performer = performer;
+    }
+
+    public void setValue(ObservationValue value) {
+        this.value = value;
+    }
+
+    public void setDateAbsentReason(CodeableConcept dateAbsentReason) {
+        this.dateAbsentReason = dateAbsentReason;
+    }
+
+    public void setInterpretation(CodeableConcept interpretation) {
+        this.interpretation = interpretation;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
+    public void setBodySite(CodeableConcept bodySite) {
+        this.bodySite = bodySite;
+    }
+
+    public void setMethod(CodeableConcept method) {
+        this.method = method;
+    }
+
+    public void setSpecimen(Reference specimen) {
+        this.specimen = specimen;
+    }
+
+    public void setDevice(Reference device) {
+        this.device = device;
+    }
+
+    public void setRelated(List<ObservationRelated> related) {
+        this.related = related;
+    }
+
+    public void setComponent(List<ObservationComponent> component) {
+        this.component = component;
+    }
+
+    public void setReference(Reference reference) {
+        this.reference = reference;
+    }
 }
