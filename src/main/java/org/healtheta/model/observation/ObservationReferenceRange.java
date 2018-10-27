@@ -45,4 +45,60 @@ public class ObservationReferenceRange {
 
     @Column(name = "_text")
     private String text;
+
+    public Long getId() {
+        return id;
+    }
+
+    public Quantity getLow() {
+        return low;
+    }
+
+    public Quantity getHigh() {
+        return high;
+    }
+
+    public CodeableConcept getType() {
+        return type;
+    }
+
+    public List<CodeableConcept> getAppliesTo() {
+        return appliesTo;
+    }
+
+    public Range getAge() {
+        return age;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setLow(Quantity low) {
+        this.low = low;
+    }
+
+    public void setHigh(Quantity high) {
+        this.high = high;
+    }
+
+    public void setType(CodeableConcept type) {
+        this.type = type;
+    }
+
+    public void setAppliesTo(List<CodeableConcept> appliesTo) {
+        this.appliesTo = appliesTo;
+    }
+
+    public void setAge(Range age) {
+        this.age = age;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
 }

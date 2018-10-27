@@ -23,5 +23,27 @@ public class ObservationRelated {
     @JoinColumn(name = "_target")
     private Reference target;
 
+    public Long getId() {
+        return id;
+    }
 
+    public String getType() {
+        return type;
+    }
+
+    public Reference getTarget() {
+        return target;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public void setTarget(Reference target) {
+        this.target = target;
+    }
 }

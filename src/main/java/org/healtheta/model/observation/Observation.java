@@ -1,4 +1,4 @@
-package org.healtheta.model.observation.repo;
+package org.healtheta.model.observation;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.healtheta.model.common.*;

@@ -38,4 +38,52 @@ public class ObservationComponent {
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @Column(name = "_referenceRange")
     private List<ObservationReferenceRange> referenceRange;
+
+    public Long getId() {
+        return id;
+    }
+
+    public CodeableConcept getCode() {
+        return code;
+    }
+
+    public ObservationValue getValue() {
+        return value;
+    }
+
+    public CodeableConcept getDataAbsentReason() {
+        return dataAbsentReason;
+    }
+
+    public CodeableConcept getInterpretation() {
+        return interpretation;
+    }
+
+    public List<ObservationReferenceRange> getReferenceRange() {
+        return referenceRange;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setCode(CodeableConcept code) {
+        this.code = code;
+    }
+
+    public void setValue(ObservationValue value) {
+        this.value = value;
+    }
+
+    public void setDataAbsentReason(CodeableConcept dataAbsentReason) {
+        this.dataAbsentReason = dataAbsentReason;
+    }
+
+    public void setInterpretation(CodeableConcept interpretation) {
+        this.interpretation = interpretation;
+    }
+
+    public void setReferenceRange(List<ObservationReferenceRange> referenceRange) {
+        this.referenceRange = referenceRange;
+    }
 }
